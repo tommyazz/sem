@@ -22,8 +22,8 @@ class LptRunner(SimulationRunner):
     only creates its statistics as it performs simulations.
     """
 
-    def __init__(self, path, script, optimized):
-        SimulationRunner.__init__(self, path, script, optimized)
+    def __init__(self, path, script, optimized, skip_config):
+        SimulationRunner.__init__(self, path, script, optimized, skip_config)
         self.parameter_runtime_map = {}
 
 
