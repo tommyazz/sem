@@ -184,8 +184,7 @@ class CampaignManager(object):
         runner = None
         if ns_path is not None:
             runner = CampaignManager.create_runner(ns_path, script,
-                                                   skip_config=skip_config,
-                                                   runner_type, optimized)
+                                                   runner_type, optimized, skip_config)
 
         return cls(db, runner, check_repo)
 
