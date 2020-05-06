@@ -122,7 +122,7 @@ class SimulationRunner(object):
             skip_configuration (bool): whether to skip the configuration step,
                 and only perform compilation.
         """
-
+        print ("Skip_configuration=", skip_configuration)
         # Only configure if necessary
         if not skip_configuration:
             configuration_command = ['python', 'waf', 'configure', '--enable-examples',
