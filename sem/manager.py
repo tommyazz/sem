@@ -111,6 +111,7 @@ class CampaignManager(object):
             # Try loading
             manager = CampaignManager.load(campaign_dir, ns_path,
                                            runner_type=runner_type,
+                                           skip_config=skip_config,
                                            optimized=optimized,
                                            check_repo=check_repo)
 
@@ -218,7 +219,6 @@ class CampaignManager(object):
         elif runner_type == 'Auto':
             runner_type = 'LptRunner'
     
-        print ("Create runner skip_config=", skip_config)
         return locals().get(runner_type,
                             globals().get(runner_type))(
                                 ns_path, script, optimized=optimized, skip_config=skip_config)
