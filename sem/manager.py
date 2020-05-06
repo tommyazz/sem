@@ -217,7 +217,8 @@ class CampaignManager(object):
             runner_type = 'GridRunner'
         elif runner_type == 'Auto':
             runner_type = 'LptRunner'
-
+    
+        print ("Create runner skip_config=", skip_config)
         return locals().get(runner_type,
                             globals().get(runner_type))(
                                 ns_path, script, optimized=optimized, skip_config=skip_config)
